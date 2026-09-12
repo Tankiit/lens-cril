@@ -1,0 +1,90 @@
+/* ---- tokens ---------------------------------------------------- */
+:root {
+  --paper: #f7f8f6;     /* cool off-white */
+  --ink: #14213d;       /* deep ink blue, all text */
+  --ink-soft: #4b5567;
+  --rule: #cfd4dc;
+  --cobalt: #2246c9;    /* the one accent */
+  --display: "Bricolage Grotesque", system-ui, sans-serif;
+  --serif: "Source Serif 4", Georgia, serif;
+  --measure: 62ch;
+}
+
+/* ---- base ------------------------------------------------------ */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+a { color: var(--cobalt); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:focus-visible, .letter:focus-visible { outline: 2px solid var(--cobalt); outline-offset: 4px; }
+h2, h3 { font-family: var(--display); line-height: 1.1; margin: 0 0 1rem; }
+h2 { font-size: 1.6rem; font-weight: 600; }
+h3 { font-size: 1.15rem; font-weight: 600; }
+main > section { max-width: 68rem; margin: 0 auto; padding: 3.5rem 1.5rem; border-top: 1px solid var(--rule); }
+main > section.hero { border-top: 0; }
+
+/* ---- header ---------------------------------------------------- */
+.top {
+  display: flex; justify-content: space-between; align-items: baseline;
+  max-width: 68rem; margin: 0 auto; padding: 1.25rem 1.5rem;
+  font-family: var(--display);
+}
+.top .mark { font-weight: 800; font-size: 1.1rem; letter-spacing: .04em; color: var(--ink); text-decoration: none; }
+.top nav a { margin-left: 1.5rem; color: var(--ink-soft); text-decoration: none; }
+.top nav a:hover { color: var(--cobalt); }
+
+/* ---- hero / wordmark ------------------------------------------- */
+.hero { padding-top: 5rem; padding-bottom: 4rem; }
+.wordmark {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: clamp(3.5rem, 13vw, 9rem);
+  line-height: .95;
+  letter-spacing: -.03em;
+  margin: 0 0 2rem;
+  display: flex; flex-wrap: wrap; column-gap: .05em;
+}
+.letter { display: inline-flex; align-items: baseline; cursor: default; border-radius: 4px; }
+.letter b { font-weight: inherit; }
+.letter i {
+  font-style: normal; font-weight: 400; color: var(--cobalt);
+  max-width: 0; overflow: hidden; white-space: nowrap;
+  transition: max-width .45s cubic-bezier(.2,.8,.2,1);
+}
+.letter:hover i, .letter:focus-visible i { max-width: 12ch; }
+@media (prefers-reduced-motion: reduce) { .letter i { transition: none; } }
+/* On touch/small screens the words are always open. */
+@media (hover: none), (max-width: 640px) {
+  .wordmark { flex-direction: column; row-gap: .1em; }
+  .letter i { max-width: none; }
+}
+.lede { font-size: 1.35rem; max-width: var(--measure); margin: 0 0 1rem; }
+.affil { color: var(--ink-soft); margin: 0; }
+
+/* ---- threads --------------------------------------------------- */
+.threads .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 2.5rem; }
+.threads article p { margin: 0; }
+
+/* ---- people ---------------------------------------------------- */
+.people ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); }
+.people li a { font-family: var(--display); font-weight: 600; color: var(--ink); }
+.people li span { display: block; color: var(--ink-soft); font-size: .95rem; }
+
+/* ---- publications ---------------------------------------------- */
+.pubs ol { list-style: none; padding: 0; margin: 0 0 1.5rem; }
+.pubs li { display: grid; grid-template-columns: 4rem 1fr; gap: 1rem; padding: .9rem 0; border-top: 1px solid var(--rule); }
+.pubs li:first-child { border-top: 0; }
+.pubs .year { font-family: var(--display); color: var(--ink-soft); }
+.pubs li div span { display: block; color: var(--ink-soft); font-size: .95rem; }
+.pubs .links a { margin-right: .75rem; }
+
+/* ---- footer ---------------------------------------------------- */
+footer { max-width: 68rem; margin: 0 auto; padding: 2rem 1.5rem 3rem; color: var(--ink-soft); font-size: .9rem; border-top: 1px solid var(--rule); }
