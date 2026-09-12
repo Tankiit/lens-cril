@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>LENS — Logic, Explanation, Neural sensing · CRIL</title>
-  <meta name="description" content="TODO: one-sentence description of the group for search engines.">
+  <meta name="description" content="LENS is a research group at CRIL (CNRS, Université d'Artois) working on neuro-symbolic reasoning, explainable AI, and uncertainty-aware multimodal perception.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -17,93 +17,150 @@
     <a href="#threads">Research</a>
     <a href="#people">People</a>
     <a href="#publications">Publications</a>
-    <a href="#join">Join</a>
+    <a href="#contact">Contact</a>
   </nav>
 </header>
 
 <main>
 
-  <!-- HERO: the wordmark is the design. Hover/focus a letter to open its word. -->
   <section class="hero">
     <h1 class="wordmark" aria-label="LENS: Logic, Explanation, Neural sensing">
-      <span class="letter" tabindex="0"><b>L</b><i>ogic</i></span>
-      <span class="letter" tabindex="0"><b>E</b><i>xplanation</i></span>
-      <span class="letter" tabindex="0"><b>N</b><i>eural</i></span>
-      <span class="letter" tabindex="0"><b>S</b><i>ensing</i></span>
+      <span class="letter c-logic" tabindex="0"><b>L</b><i>ogic</i></span>
+      <span class="letter c-expl" tabindex="0"><b>E</b><i>xplanation</i></span>
+      <span class="letter c-neural" tabindex="0"><b>N</b><i>eural</i></span>
+      <span class="letter c-neural" tabindex="0"><b>S</b><i>ensing</i></span>
     </h1>
     <p class="lede">
-      <!-- TODO: thesis sentence. What single question do the three threads answer together?
-           e.g. "We build perception systems whose reasoning can be written down, checked, and trusted." -->
-      TODO thesis sentence.
+      We build learning systems whose reasoning can be written down, whose uncertainty can be trusted, and whose explanations can be checked.
     </p>
     <p class="affil">
       A research group at <a href="https://www.cril.univ-artois.fr/">CRIL</a>, CNRS UMR 8188 · Université d'Artois, Lens, France
     </p>
   </section>
 
-  <!-- THREADS: three columns, one per word. Keep each to ~40 words. -->
   <section id="threads" class="threads">
     <h2>What we work on</h2>
     <div class="grid">
-      <article>
+      <article class="c-logic">
         <h3>Logic</h3>
-        <p>TODO: neuro-symbolic reasoning, constrained decoding, formal verification of learned components.</p>
+        <p>Neuro-symbolic reasoning: knowledge compilation, constrained decoding, and formal guarantees for learned components.</p>
       </article>
-      <article>
+      <article class="c-expl">
         <h3>Explanation</h3>
-        <p>TODO: concept bottleneck models, interval-valued attributions, uncertainty-aware explanations.</p>
+        <p>Concept bottleneck models, rationales, and interval-valued attributions — explanations that carry their own uncertainty.</p>
       </article>
-      <article>
+      <article class="c-neural">
         <h3>Neural sensing</h3>
-        <p>TODO: multimodal and vision-language perception, credal uncertainty under distribution shift.</p>
+        <p>Multimodal and vision-language perception, credal and random-set uncertainty, out-of-distribution detection, medical imaging.</p>
       </article>
     </div>
   </section>
 
-  <!-- PEOPLE: name, role, one line, link. Add a <li> per person. -->
   <section id="people" class="people">
     <h2>People</h2>
     <ul>
       <li>
-        <a href="TODO">Tanmoy TODO</a>
-        <span>Researcher, CNRS · TODO one-line focus</span>
+        <a href="https://www.cril.univ-artois.fr/~bouraoui/">Zied Bouraoui</a>
+        <span>CRIL, Université d'Artois · TODO one-line focus</span>
       </li>
       <li>
-        <a href="TODO">TODO PhD student</a>
-        <span>PhD student · TODO topic</span>
+        <a href="https://github.com/Tankiit">Tanmoy Mukherjee</a>
+        <span>Senior Researcher, CRIL · uncertainty, interpretability, neuro-symbolic reasoning</span>
       </li>
-      <!-- TODO: more people -->
+      <!-- TODO: PhD students (Naïm Es-sebbani, Mateus Toledo, …) -->
     </ul>
   </section>
 
-  <!-- PUBLICATIONS: reverse chronological. One <li> per paper, most recent first. -->
   <section id="publications" class="pubs">
     <h2>Selected publications</h2>
-    <ol reversed>
+    <ol>
       <li>
         <span class="year">2026</span>
         <div>
-          <a href="TODO">TODO paper title</a>
-          <span>TODO authors · TODO venue</span>
-          <span class="links"><a href="TODO">pdf</a> <a href="TODO">code</a></span>
+          <a href="https://aclanthology.org/2026.acl-long.1991/">Credal Concept Bottleneck Models for Epistemic–Aleatoric Uncertainty Decomposition</a>
+          <span>T. Mukherjee, T. Bailleux, P. Marquis, Z. Bouraoui · ACL 2026 (main)</span>
         </div>
       </li>
-      <!-- TODO: more papers. If the list grows past ~15, move to publications.html -->
+      <li>
+        <span class="year">2026</span>
+        <div>
+          <a href="https://aclanthology.org/2026.findings-acl.1800/">Explanation Quality Assessment as Ranking with Listwise Rewards</a>
+          <span>T. Bailleux*, T. Mukherjee*, E. Lonca, P. Marquis, Z. Bouraoui · Findings of ACL 2026</span>
+        </div>
+      </li>
+      <li>
+        <span class="year">2025</span>
+        <div>
+          <a href="https://aclanthology.org/2025.starsem-1.33/">Connecting Concept Layers and Rationales to Enhance Language Model Interpretability</a>
+          <span>T. Bailleux, T. Mukherjee, P. Marquis, Z. Bouraoui · *SEM 2025</span>
+        </div>
+      </li>
+      <li>
+        <span class="year">2024</span>
+        <div>
+          <a href="https://doi.org/10.1016/j.media.2024.103107">Semi-supervised Medical Image Classification via Distance Correlation Minimization and Graph Attention Regularization</a>
+          <span>A. Díaz Berenguer, M. Kvasnytsia, M. N. Bossa, T. Mukherjee, N. Deligiannis, H. Sahli · Medical Image Analysis</span>
+        </div>
+      </li>
+      <li>
+        <span class="year">2022</span>
+        <div>
+          <a href="https://arxiv.org/abs/2203.05081">NLX-GPT: A Model for Natural Language Explanations in Vision and Vision-Language Tasks</a>
+          <span>F. Sammani, T. Mukherjee, N. Deligiannis · CVPR 2022</span>
+        </div>
+      </li>
+      <li>
+        <span class="year">2022</span>
+        <div>
+          <a href="https://doi.org/10.1007/978-3-031-25082-8_41">Representation Learning with Information Theory to Detect COVID-19 and Its Severity</a>
+          <span>A. Díaz Berenguer, T. Mukherjee, Y. Da, M. N. Bossa, M. Kvasnytsia, J. Vandemeulebroucke, N. Deligiannis, H. Sahli · ECCV 2022 Workshops</span>
+        </div>
+      </li>
     </ol>
-    <p><a href="https://scholar.google.com/TODO">Full list on Google Scholar</a></p>
+
+    <h3>Under review</h3>
+    <ol>
+      <li>
+        <span class="year">2026</span>
+        <div>
+          <a href="https://arxiv.org/abs/2602.11219">Credal Concept Bottleneck Models: Structural Separation of Epistemic and Aleatoric Uncertainty</a>
+          <span>T. Mukherjee, M. Kloft, P. Marquis, Z. Bouraoui</span>
+        </div>
+      </li>
+      <li>
+        <span class="year">2026</span>
+        <div>
+          <span class="title">Auditable Concepts: Instance-Adaptive Ambiguity Sets for Distributionally Robust Concept Learning</span>
+          <span>T. Mukherjee et al.</span>
+        </div>
+      </li>
+      <li>
+        <span class="year">2026</span>
+        <div>
+          <span class="title">Do Language Models Hesitate Where Humans Disagree?</span>
+          <span>N. Es-sebbani, T. Mukherjee, Z. Bouraoui</span>
+        </div>
+      </li>
+      <li>
+        <span class="year">2026</span>
+        <div>
+          <span class="title">When Auxiliary Hidden-State Probes Fail</span>
+          <span>N. Es-sebbani, T. Mukherjee, Z. Bouraoui</span>
+        </div>
+      </li>
+    </ol>
   </section>
 
-  <!-- JOIN -->
-  <section id="join" class="join">
-    <h2>Join us</h2>
-    <p>TODO: open PhD/postdoc/intern positions, or a standing line about how to get in touch.</p>
-    <p><a href="mailto:TODO@cril.fr">TODO@cril.fr</a> · <a href="https://github.com/lens-cril">github.com/lens-cril</a></p>
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>CRIL, Faculté des Sciences Jean Perrin, Rue Jean Souvraz, 62300 Lens, France.</p>
+    <p><a href="mailto:TODO@cril.fr">TODO@cril.fr</a> · <a href="https://github.com/Tankiit/lens-cril">GitHub</a></p>
   </section>
 
 </main>
 
 <footer>
-  <p>LENS · CRIL, CNRS UMR 8188 · Université d'Artois · Rue Jean Souvraz, 62300 Lens</p>
+  <p>LENS · CRIL, CNRS UMR 8188 · Université d'Artois</p>
 </footer>
 
 </body>
